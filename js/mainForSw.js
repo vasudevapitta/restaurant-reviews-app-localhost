@@ -2,7 +2,7 @@ if(navigator.serviceWorker){
 	console.log('service worker supported');
 
 	window.addEventListener('load', ()=>{
-		navigator.serviceWorker.register('../service-worker.js')
+		navigator.serviceWorker.register('service-worker.js', {scope: '/'})
 		.then((response)=>{
 			console.log('serviceWorker is registered')
 		})
